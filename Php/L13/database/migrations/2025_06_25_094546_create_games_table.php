@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('game');
             $table->string('genre')->nullable();
-            $table->string('publisher');
+            $table->foreignId('publisher_id')->constrained()->deferrable;
             $table->string('original_platform');
             $table->integer('year');
             $table->timestamps();

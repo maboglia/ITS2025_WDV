@@ -3,13 +3,14 @@
 
 @section('content')
 
-    <h1>Gioco {{ $gioco->game }}</h1>
+    <h1>Publisher {{ $publisher->name }}</h1>
+
+    @foreach($publisher->games as $gioco)
 
     <article>
-        <header>{{ $gioco->game }}</header>
+        <header><h3>{{ $gioco->game }}</h3></header>
         <ul>
             <li>Genre: {{ $gioco->genre }}</li>
-            <li>Publisher: {{ $gioco->publisher->name }}</li>
             <li>Original platform: {{ $gioco->original_platform }}</li>
             <li>Year: {{ $gioco->year }}</li>
             <li><a href="https://www.google.com/search?q={{ $gioco->game }}">Cerca</a></li>
@@ -17,6 +18,7 @@
         <footer>WDV Production Inc.</footer>
     </article>
 
+    @endforeach
 
 @endsection
 

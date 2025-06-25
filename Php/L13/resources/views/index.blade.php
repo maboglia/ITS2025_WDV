@@ -16,6 +16,8 @@
     <ul>
         <li><a href="{{ route('home') }}">Home</a></li>
         <li><a href="{{ route('about') }}">About</a></li>
+        <li><a href="{{ route('games.index') }}">games</a></li>
+        <li><a href="{{ route('publishers.index') }}">publishers</a></li>
         <li></li>
     </ul>
  </nav>
